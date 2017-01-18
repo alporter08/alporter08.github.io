@@ -14,3 +14,5 @@ of email addresses by allocated volunteers primarily using MTA turnstile data an
 ## Data cleaning and exploration ##
 Sadly, in the real world data is often messy.  The MTA turnstile data is no different, despite being a relatively straightforward dataset.  Our first task was to inspect the data and identify potential issues with the validity of the values.  One issue we ran into was coming up with a count of passengers within a given interval of time (e.g. per day) due to the fact that counts in the data set are given in 4 hour blocks that occasionally overlap into the next day (e.g. window between 11pm and 3am), in addition to being inconsistent across the different measurement units.  We addressed this problem by simply looping over the data and subtracting the earliest count from the latest count for each day.  Although this led to some possible underestimation, we deemed it to be acceptable for the purposes of our analysis given the likely low traffic in the middle of the night.
 
+
+![an image alt text](https://github.com/alporter08/alporter08.github.io/blob/master/images/Station%20frequency.png "Entries April 2016")
